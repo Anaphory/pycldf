@@ -423,7 +423,7 @@ class Dataset(object):
 
     @staticmethod
     def get_tabletype(table):
-        if table.common_props.get('dc:conformsTo', '') is None:
+        if table.common_props.get('dc:conformsTo') is None:
             return None
         if '#' in table.common_props.get('dc:conformsTo', ''):
             res = table.common_props['dc:conformsTo'].split('#')[1]
